@@ -14,7 +14,8 @@ export default {
   components: { CoachForm },
   methods: {
       addCoach(formData) {
-          this.$store.actions.dispatch('add-coach', formData);
+          this.$store.dispatch('coaches/addCoach', formData);
+          this.$router.push('/coaches');
       }
   }
 };

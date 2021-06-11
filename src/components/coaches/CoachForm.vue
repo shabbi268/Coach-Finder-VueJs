@@ -19,15 +19,15 @@
     <div class="form-control">
       <h3>Areas of Expertise:</h3>
       <div>
-          <input type="checkbox" id="frontend" value="frontend" v-model="area"/>
+          <input type="checkbox" id="frontend" value="frontend" v-model="areas"/>
           <label>Frontend Development</label>
       </div>
       <div>
-          <input type="checkbox" id="backend" value="backend" v-model="area"/>
+          <input type="checkbox" id="backend" value="backend" v-model="areas"/>
           <label>Backend Development</label>
       </div>
       <div>
-          <input type="checkbox" id="career" value="career" v-model="area"/>
+          <input type="checkbox" id="career" value="career" v-model="areas"/>
           <label>Career Development</label>
       </div>
     </div>
@@ -56,7 +56,8 @@ export default {
                 rate: this.rate,
                 areas: this.areas
             };
-            this.$emit['register-form', formData];
+            console.log(formData);
+            this.$emit('register-form', formData);
         }
     }
 }
