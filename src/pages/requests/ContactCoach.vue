@@ -22,7 +22,7 @@ export default {
         return {
             email: '',
             message: '',
-            formIsValid: true
+            formIsValid: true,
         }
     },
     methods: {

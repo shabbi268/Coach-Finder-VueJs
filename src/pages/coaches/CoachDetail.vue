@@ -33,6 +33,7 @@ export default {
     },
     created() {
         this.selectedCoach = this.$store.getters['coaches/coaches'].find(coach => coach.id === this.id);
+        console.log('selectedCoach: ',this.selectedCoach);
     },
     computed: {
         fullName() {

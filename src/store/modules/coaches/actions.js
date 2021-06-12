@@ -2,6 +2,7 @@ export default {
     async addCoach(context, payload) {
         const userId = context.rootGetters.userId;
         const coach = {
+            id: userId,
             firstName: payload.first,
             lastName: payload.last,
             description: payload.desc,
@@ -33,6 +34,7 @@ export default {
         const coaches = [];
         for (const key in responseData) {
             const coach = {
+                id: responseData[key].id,
                 firstName: responseData[key].firstName,
                 lastName: responseData[key].lastName,
                 description: responseData[key].description,
@@ -41,7 +43,6 @@ export default {
             }
             coaches.push(coach);
         }
-        console.log('coaches: ', coaches);
         context.commit('setCoaches', coaches)
     }
 };
