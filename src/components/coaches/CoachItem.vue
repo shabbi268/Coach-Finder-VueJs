@@ -8,9 +8,9 @@
       </span>
     </div>
     <div class="actions">
-      <base-button link mode="outline" :to="coachContactLink"
-        >Contact</base-button
-      >
+      <base-button link mode="outline" :to="coachContactLink">
+        Contact
+      </base-button>
       <base-button link :to="coactDetails">View Details</base-button>
     </div>
   </li>
