@@ -21,7 +21,6 @@ export default {
         const response = await fetch(`https://vue-practice-3ecb0-default-rtdb.firebaseio.com/requests/${coachId}.json`);
 
         const responseData = await response.json();
-        console.log('responseData: ', responseData)
 
         if (!response.ok) {
             throw new Error(responseData.message || 'Failed to fetch the requests!')
