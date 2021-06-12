@@ -9,7 +9,8 @@
     <base-card>
       <header>
         <h2>Interested? Reach out Now</h2>
-        <base-button link :to="contactLink">Contact</base-button>
+        <router-view></router-view>
+        <!-- <base-button link :to="contactLink">Contact</base-button> -->
       </header>
     </base-card>
   </section>
@@ -32,7 +33,6 @@ export default {
     },
     created() {
         this.selectedCoach = this.$store.getters['coaches/coaches'].find(coach => coach.id === this.id);
-        console.log('selectedCoach: ',this.selectedCoach);
     },
     computed: {
         fullName() {

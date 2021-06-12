@@ -1,6 +1,5 @@
 export default {
     addCoach(context, payload) {
-        console.log('actions: ', payload);
         const coach = {
             id: context.rootGetters.userId,
             firstName: payload.first,
